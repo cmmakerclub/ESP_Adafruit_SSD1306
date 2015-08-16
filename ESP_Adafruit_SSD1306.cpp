@@ -142,7 +142,7 @@ void Adafruit_SSD1306::begin(uint8_t vccstate, uint8_t i2caddr, bool reset) {
   _vccstate = vccstate;
   _i2caddr = i2caddr;
     // I2C Init
-	ESP.wdtDisable();
+	// ESP.wdtDisable();
     Wire.begin();
 	Wire.setClock(450000); // maximum
 /*   if (reset) {
