@@ -213,7 +213,7 @@ void Adafruit_SSD1306::drawPixel(int16_t x, int16_t y, uint16_t color) {
   // check rotation, move pixel around if necessary
   switch (getRotation()) {
   case 1:
-    swap(x, y);
+   // swap(x, y);
     x = WIDTH - x - 1;
     break;
   case 2:
@@ -221,7 +221,7 @@ void Adafruit_SSD1306::drawPixel(int16_t x, int16_t y, uint16_t color) {
     y = HEIGHT - y - 1;
     break;
   case 3:
-    swap(x, y);
+   // swap(x, y);
     y = HEIGHT - y - 1;
     break;
   }  
@@ -556,7 +556,7 @@ void Adafruit_SSD1306::drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t c
     case 1:
       // 90 degree rotation, swap x & y for rotation, then invert x
       bSwap = true;
-      swap(x, y);
+     // swap(x, y);
       x = WIDTH - x - 1;
       break;
     case 2:
@@ -568,7 +568,7 @@ void Adafruit_SSD1306::drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t c
     case 3:
       // 270 degree rotation, swap x & y for rotation, then invert y  and adjust y for w (not to become h)
       bSwap = true;
-      swap(x, y);
+      //swap(x, y);
       y = HEIGHT - y - 1;
       y -= (w-1);
       break;
@@ -624,7 +624,7 @@ void Adafruit_SSD1306::drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t c
     case 1:
       // 90 degree rotation, swap x & y for rotation, then invert x and adjust x for h (now to become w)
       bSwap = true;
-      swap(x, y);
+     // swap(x, y);
       x = WIDTH - x - 1;
       x -= (h-1);
       break;
@@ -637,7 +637,7 @@ void Adafruit_SSD1306::drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t c
     case 3:
       // 270 degree rotation, swap x & y for rotation, then invert y 
       bSwap = true;
-      swap(x, y);
+      //swap(x, y);
       y = HEIGHT - y - 1;
       break;
   }
